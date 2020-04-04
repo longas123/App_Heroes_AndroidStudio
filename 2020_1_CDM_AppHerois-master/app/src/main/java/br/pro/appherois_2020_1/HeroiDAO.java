@@ -19,6 +19,7 @@ public class HeroiDAO {
         valores.put( "grupo", heroi.getGrupo() );
 
         SQLiteDatabase db = banco.getWritableDatabase();
+
         db.insert("herois", null, valores);
     }
 

@@ -28,6 +28,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -99,7 +101,8 @@ public class MainActivity extends AppCompatActivity {
 
     private void carregarHerois(){
         List<Heroi> listaHerois = HeroiDAO.listar( this );
-        ArrayAdapter adapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, listaHerois);
+  //      ArrayAdapter adapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, listaHerois);
+        AdapterHeroi adapter = new AdapterHeroi(this, listaHerois);
         lvLista.setAdapter( adapter );
     }
 

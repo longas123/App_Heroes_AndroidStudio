@@ -18,7 +18,7 @@ public class Banco extends SQLiteOpenHelper {
         db.execSQL("CREATE TABLE IF NOT EXISTS herois ( " +
                 "  id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT , " +
                 "  nome TEXT , " +
-                "  grupo TEXT ) ");
+                "  grupo TEXT  ) ");
     }
 
     @Override
